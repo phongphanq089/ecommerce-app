@@ -9,9 +9,7 @@ export default function RootLayout({
   return (
     <div className='layout-wrapper'>
       <Header />
-      <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-        <div className='flex-grow flex-1'>{children}</div>
-      </main>
+      <main className='w-full'>{children}</main>
       <Footer />
     </div>
   )

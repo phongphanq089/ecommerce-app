@@ -6,26 +6,32 @@ import Link from 'next/link'
 import Navbar from './nav-bar'
 import SvgIcon from '@/components/ui/svg-icon'
 import BtnOpenMenu from './nav-bar/btn-open-menu'
+import Logo from '../logo'
+import { Button } from '@/components/ui/button'
 const Header = () => {
   const [isActive, setIsActive] = useState(false)
   return (
-    <div className='wrapper-header bg-color-3 fixed w-full top-0 right-0 p-2'>
-      <div className='container-2xl'>
-        <div className='flex justify-between text-xs uppercase btn-menu__navbar'>
-          <BtnOpenMenu isActive={isActive} setIsActive={setIsActive} />
-          <Link href='/' className='flex items-center fon t-bold text-sm'>
-            SHOP-FAST
-          </Link>
-          <motion.div
-            variants={opacity}
-            animate={!isActive ? 'open' : 'closed'}
-            className='flex items-center gap-3'
-          >
-            <div className='flex items-center gap-2 cursor-pointer'>
-              <SvgIcon icon='cart' />
-              <span className='relative top-[5px]'>Cart(0)</span>
+    <div className='wrapper-header bg-white fixed w-full top-0 right-0 p-2 z-[999]'>
+      <div className='container-2xl border rounded-3xl py-1'>
+        <div className='flex justify-between items-center text-xs uppercase btn-menu__navbar'>
+          <div className='flex items-center gap-2'>
+            <Link href='/'>
+              <Logo />
+            </Link>
+          </div>
+          <div className='flex items-center gap-2'>
+            <BtnOpenMenu isActive={isActive} setIsActive={setIsActive} />
+            <div className='cursor-pointer p-1'>
+              <SvgIcon icon='search' className='w-[35px] h-auto' />
             </div>
-          </motion.div>
+            <div className='flex items-center gap-1 cursor-pointer p-1 rounded-md relative'>
+              <SvgIcon icon='cart' />
+              <span className='text-xs absolute top-0 -right-1 bg-red-400 min-w-[25px] min-h-[25px] rounded-full flex items-center justify-center text-white'>
+                3
+              </span>
+            </div>
+            <Button className='button-style ml-2'>Login</Button>
+          </div>
         </div>
       </div>
 

@@ -12,7 +12,7 @@ const BtnOpenMenu = ({ isActive, setIsActive }: PropsType) => {
       onClick={() => {
         setIsActive(!isActive)
       }}
-      className='flex items-center cursor-pointer gap-1'
+      className='flex items-center cursor-pointer gap-1 bg-color-3 p-2 rounded-md'
     >
       <div className={`btn-menu__line ${isActive ? 'burgerActive' : ''}`}></div>
       <div className={'label'}>

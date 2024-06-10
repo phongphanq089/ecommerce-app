@@ -4,51 +4,56 @@ import { motion } from 'framer-motion'
 import { translate } from '@/lib/motion-option'
 const LinkNavBotom = () => {
   return (
-    <div className='footer'>
-      <ul>
-        <motion.li
+    <div className='flex items-center justify-between'>
+      <div>
+        <motion.span
+          custom={[0.3, 0]}
+          variants={translate}
+          initial='initial'
+          animate='enter'
+          exit='exit'
+          className='flex items-center gap-1'
+        >
+          <span className='text-color-2 font-bold'>Made by:</span>Studio Lumio
+        </motion.span>
+      </div>
+      <div>
+        <motion.span
+          custom={[0.3, 0]}
+          variants={translate}
+          initial='initial'
+          animate='enter'
+          exit='exit'
+          className='flex items-center gap-1'
+        >
+          <span className='text-color-2 font-bold'>Typography:</span> Google
+          Fonts
+        </motion.span>
+      </div>
+      <div>
+        <motion.span
+          custom={[0.3, 0]}
+          variants={translate}
+          initial='initial'
+          animate='enter'
+          exit='exit'
+          className='flex items-center gap-1'
+        >
+          <span className='text-color-2 font-bold'>Images:</span> Freepik,
+          Envato
+        </motion.span>
+      </div>
+      <div className='flex flex-col gap-1'>
+        <motion.span
           custom={[0.3, 0]}
           variants={translate}
           initial='initial'
           animate='enter'
           exit='exit'
         >
-          <span>Made by:</span>Studio Lumio
-        </motion.li>
-      </ul>
-      <ul>
-        <motion.li
-          custom={[0.3, 0]}
-          variants={translate}
-          initial='initial'
-          animate='enter'
-          exit='exit'
-        >
-          <span>Typography:</span> Google Fonts
-        </motion.li>
-      </ul>
-      <ul>
-        <motion.li
-          custom={[0.3, 0]}
-          variants={translate}
-          initial='initial'
-          animate='enter'
-          exit='exit'
-        >
-          <span>Images:</span> Freepik, Envato
-        </motion.li>
-      </ul>
-      <ul>
-        <motion.li
-          custom={[0.3, 0]}
-          variants={translate}
-          initial='initial'
-          animate='enter'
-          exit='exit'
-        >
-          Privacy Policy
-        </motion.li>
-        <motion.li
+          Privacy Pospancy
+        </motion.span>
+        <motion.span
           custom={[0.3, 0]}
           variants={translate}
           initial='initial'
@@ -56,8 +61,8 @@ const LinkNavBotom = () => {
           exit='exit'
         >
           Terms & Conditions
-        </motion.li>
-      </ul>
+        </motion.span>
+      </div>
     </div>
   )
 }
