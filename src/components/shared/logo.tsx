@@ -3,7 +3,7 @@ import React from 'react'
 
 const Logo = () => {
   return (
-    <div className='max-w-[160px]'>
+    <div className='max-w-[110px] 2xl:max-w-[160px]'>
       <Image
         src={'/logo-page.png'}
         alt='shop fast'

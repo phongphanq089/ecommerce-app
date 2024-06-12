@@ -11,38 +11,40 @@ import { Button } from '@/components/ui/button'
 const Header = () => {
   const [isActive, setIsActive] = useState(false)
   return (
-    <div className='wrapper-header bg-white fixed w-full top-0 right-0 p-2 z-[999]'>
-      <div className='container-2xl border rounded-3xl py-1'>
-        <div className='flex justify-between items-center text-xs uppercase btn-menu__navbar'>
-          <div className='flex items-center gap-2'>
-            <Link href='/'>
-              <Logo />
-            </Link>
-          </div>
-          <div className='flex items-center gap-2'>
-            <BtnOpenMenu isActive={isActive} setIsActive={setIsActive} />
-            <div className='cursor-pointer p-1'>
-              <SvgIcon icon='search' className='w-[35px] h-auto' />
+    <header className='h-[110px]'>
+      <nav className='wrapper-header bg-white fixed w-full top-0 right-0 pt-2 z-[999]'>
+        <div className='container-2xl border rounded-3xl py-1'>
+          <div className='flex justify-between items-center text-xs uppercase btn-menu__navbar'>
+            <div className='flex items-center gap-2'>
+              <Link href='/'>
+                <Logo />
+              </Link>
             </div>
-            <div className='flex items-center gap-1 cursor-pointer p-1 rounded-md relative'>
-              <SvgIcon icon='cart' />
-              <span className='text-xs absolute top-0 -right-1 bg-red-400 min-w-[25px] min-h-[25px] rounded-full flex items-center justify-center text-white'>
-                3
-              </span>
+            <div className='flex items-center gap-2'>
+              <BtnOpenMenu isActive={isActive} setIsActive={setIsActive} />
+              <div className='cursor-pointer p-1'>
+                <SvgIcon icon='search' className='w-[35px] h-auto' />
+              </div>
+              <div className='flex items-center gap-1 cursor-pointer p-1 rounded-md relative'>
+                <SvgIcon icon='cart' />
+                <span className='text-xs absolute top-0 -right-1 bg-red-400 min-w-[25px] min-h-[25px] rounded-full flex items-center justify-center text-white'>
+                  3
+                </span>
+              </div>
+              <Button className='button-style ml-2'>Login</Button>
             </div>
-            <Button className='button-style ml-2'>Login</Button>
           </div>
         </div>
-      </div>
 
-      <motion.div
-        variants={background}
-        initial='initial'
-        animate={isActive ? 'open' : 'closed'}
-        className={'wrapper-modal-bg'}
-      ></motion.div>
-      <AnimatePresence mode='wait'>{isActive && <Navbar />}</AnimatePresence>
-    </div>
+        <motion.div
+          variants={background}
+          initial='initial'
+          animate={isActive ? 'open' : 'closed'}
+          className={'wrapper-modal-bg'}
+        ></motion.div>
+        <AnimatePresence mode='wait'>{isActive && <Navbar />}</AnimatePresence>
+      </nav>
+    </header>
   )
 }
 

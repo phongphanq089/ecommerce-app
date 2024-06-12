@@ -9,7 +9,7 @@
     --color-2: #9f9689;
     --color-3: #f4f0ea;
     --color-4: rgb(191 191 177 / 1);
-    --color-5: #ff5252;
+    --color-5: #e74c3c;
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
 
@@ -100,5 +100,30 @@
 
   .title-block {
     @apply font-bold leading-none;
+  }
+}
+
+@layer utilities {
+  .CarouselPrevious {
+    svg {
+      stroke: white;
+    }
+
+    &:hover {
+      svg {
+        stroke: var(--color-5);
+      }
+    }
+  }
+  .CarouselNext {
+    svg {
+      stroke: white;
+    }
+    &:hover {
+      svg {
+        stroke: #e74c3c;
+        stroke: var(--color-5);
+      }
+    }
   }
 }
