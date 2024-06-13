@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { translate } from '@/lib/motion-option'
 const LinkNavBotom = () => {
   return (
-    <div className='flex items-center justify-between'>
+    <div className='flex md:items-center flex-col gap-2 md:flex-wrap justify-between py-2'>
       <div>
         <motion.span
           custom={[0.3, 0]}

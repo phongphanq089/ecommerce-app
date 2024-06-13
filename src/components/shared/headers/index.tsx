@@ -22,16 +22,18 @@ const Header = () => {
             </div>
             <div className='flex items-center gap-2'>
               <BtnOpenMenu isActive={isActive} setIsActive={setIsActive} />
-              <div className='cursor-pointer p-1'>
+              <div className='cursor-pointer p-1 hidden sm:block'>
                 <SvgIcon icon='search' className='w-[35px] h-auto' />
               </div>
-              <div className='flex items-center gap-1 cursor-pointer p-1 rounded-md relative'>
+              <div className='flex items-center gap-1 cursor-pointer p-1 rounded-md relative hidden sm:block'>
                 <SvgIcon icon='cart' />
                 <span className='text-xs absolute top-0 -right-1 bg-red-400 min-w-[25px] min-h-[25px] rounded-full flex items-center justify-center text-white'>
                   3
                 </span>
               </div>
-              <Button className='button-style ml-2'>Login</Button>
+              <Button className='button-style ml-2 hidden sm:block'>
+                Login
+              </Button>
             </div>
           </div>
         </div>
