@@ -1,5 +1,5 @@
 import Footer from '@/components/shared/footer'
-import Header from '@/components/shared/headers'
+import Header from '@/components/shared/header'
 
 export default function RootLayout({
   children,
@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <div className='layout-wrapper'>
       <Header />
-      <main className='w-full'>{children}</main>
+      <main className='w-full min-h-screen'>{children}</main>
       <Footer />
     </div>
   )

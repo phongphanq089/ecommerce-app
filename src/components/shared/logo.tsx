@@ -3,9 +3,9 @@ import React from 'react'
 
 const Logo = () => {
   return (
-    <div className='max-w-[110px] 2xl:max-w-[160px]'>
+    <div className='max-w-[250px]'>
       <Image
-        src={'/logo-page.png'}
+        src={'/logo-v1.png'}
         alt='shop fast'
         width={300}
         height={300}

@@ -1,12 +1,11 @@
 import BannerHero from '@/components/pages/home/banner-hero'
-import ProductFeatures from '@/components/pages/home/product-features'
-import Image from 'next/image'
+import TextBanner from '@/components/pages/home/TextBanner'
 
 export default function Home() {
   return (
     <>
       <BannerHero />
-      <ProductFeatures />
+      <TextBanner />
     </>
   )
 }
