@@ -44,7 +44,7 @@ export const Icon_v2 = ({ className }: { className?: string }) => {
       xmlns='http://www.w3.org/2000/svg'
     >
       {' '}
-      <g clip-path='url(#clip0_104_215)'>
+      <g clipPath='url(#clip0_104_215)'>
         {' '}
         <path
           fillRule='evenodd'
