@@ -13,7 +13,7 @@ const FeaturedProducts = () => {
           </h2>
           <ButtonStyle link='/products' text='All product' />
         </div>
-        <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3'>
+        <div className='grid grid-cols-2 gap-1 lg:grid-cols-3 xl:grid-cols-4 md:gap-3'>
           {listProductFeatures.map((product, index) => {
             return <CardProduct key={index} products={product} />
           })}

@@ -104,6 +104,14 @@
 }
 
 @layer utilities {
+  .writing-mode-vertical-lr {
+    writing-mode: vertical-lr;
+  }
+
+  .filter-blur {
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
   .card-product {
     .button-style {
       font-size: 14px;

@@ -1,14 +1,16 @@
+import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import React from 'react'
 
 interface PropsType {
   link: string
   text: string
+  className?: string
 }
 
-const ButtonStyle = ({ link, text }: PropsType) => {
+const ButtonStyle = ({ link, text, className }: PropsType) => {
   return (
-    <Link href={link} className='cta'>
+    <Link href={link} className={cn('cta', className)}>
       <span className='hover-underline-animation'>{text}</span>
       <span className='icon-right'>
         <svg

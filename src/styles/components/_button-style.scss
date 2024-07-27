@@ -5,6 +5,19 @@
   display: flex;
   align-items: center;
   white-space: nowrap;
+
+  &.style-light {
+    .hover-underline-animation {
+      color: white;
+    }
+    .hover-underline-animation:after {
+      background-color: white;
+    }
+
+    svg {
+      stroke: white;
+    }
+  }
 }
 
 .cta span {
@@ -36,7 +49,6 @@
 
 .hover-underline-animation {
   position: relative;
-  color: black;
   padding-bottom: 20px;
 }
 
