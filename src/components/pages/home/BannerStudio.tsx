@@ -1,13 +1,15 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useRef } from 'react'
 import Marquee from 'react-fast-marquee'
+import { useScroll, useTransform, motion } from 'framer-motion'
 
 const BannerStudio = () => {
   return (
-    <div className='py-8'>
+    <motion.div className='py-8 bg-color-1 rounded-3xl '>
       <Marquee>
-        <div className='flex items-center gap-4 justify-between text-2xl font-semibold relative z-10'>
+        <div className='flex items-center gap-4 justify-between text-2xl font-semibold relative text-white z-10'>
           {[...Array(20)].map((_, i) => {
             return (
               <React.Fragment key={i}>
@@ -18,7 +20,7 @@ const BannerStudio = () => {
         </div>
       </Marquee>
       <Marquee direction='right'>
-        <div className='flex items-center gap-4 justify-between text-2xl font-semibold relative z-10'>
+        <div className='flex items-center gap-4 justify-between text-2xl font-semibold relative text-white z-10'>
           {[...Array(20)].map((_, i) => {
             return (
               <React.Fragment key={i}>
@@ -29,7 +31,7 @@ const BannerStudio = () => {
         </div>
       </Marquee>
       <Marquee>
-        <div className='flex items-center gap-4 justify-between text-2xl font-semibold relative z-10'>
+        <div className='flex items-center gap-4 justify-between text-2xl font-semibold relative text-white z-10'>
           {[...Array(20)].map((_, i) => {
             return (
               <React.Fragment key={i}>
@@ -40,7 +42,7 @@ const BannerStudio = () => {
         </div>
       </Marquee>
       <Marquee direction='right'>
-        <div className='flex items-center gap-4 justify-between text-2xl font-semibold relative z-10'>
+        <div className='flex items-center gap-4 justify-between text-2xl font-semibold relative text-white z-10'>
           {[...Array(20)].map((_, i) => {
             return (
               <React.Fragment key={i}>
@@ -61,12 +63,12 @@ const BannerStudio = () => {
             className='w-full h-auto object-cover'
           />
         </div>
-        <div className='flex items-center justify-center flex-col  text-center max-w-2xl mx-auto mt-[-300px] '>
-          <h3 className='text-2xl font-bold mb-6 leading-none'>{`Getting dressed shouldn't be so hard `}</h3>
-          <h3 className='text-2xl font-bold leading-none'>{`Virtual closets allow you to your power`}</h3>
+        <div className='flex items-center justify-center flex-col  text-center max-w-2xl mx-auto xl:mt-[-300px] '>
+          <h3 className='text-md lg:text-2xl font-bold mb-2 md:mb-6 leading-none text-white'>{`Getting dressed shouldn't be so hard `}</h3>
+          <h3 className='text-md lg:text-2xl font-bold leading-none text-white'>{`Virtual closets allow you to your power`}</h3>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

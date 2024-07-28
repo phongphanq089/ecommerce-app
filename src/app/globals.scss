@@ -108,6 +108,32 @@
     writing-mode: vertical-lr;
   }
 
+  .btn-sroll-top {
+    background-color: var(--color-1);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    transform: scale(0);
+    transition: 0.4s;
+
+    &.isActive {
+      transform: scale(1);
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
   .filter-blur {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);

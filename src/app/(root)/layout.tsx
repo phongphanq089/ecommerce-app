@@ -11,7 +11,7 @@ export default function RootLayout({
     <LayoutWrapper>
       <div className='layout-wrapper'>
         <Header />
-        <main className='w-full min-h-screen'>{children}</main>
+        <main className='w-full min-h-screen relative'>{children}</main>
         <Footer />
       </div>
     </LayoutWrapper>
