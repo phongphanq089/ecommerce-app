@@ -33,14 +33,16 @@ const NavLink = ({ menuIsOpen, setMenuIsOpen }: propType) => {
       exit='exit'
       className='z-[999] bg-color-1 w-full h-full fixed top-0 right-0'
     >
-      <div className='px-5 py-2 flex justify-between items-center'>
+      <div className='px-1 md:px-5 py-2 flex justify-between items-center'>
         <Link
           href='/contact'
-          className='p-1 text-xs rounded-3xl bg-white  w-fit '
+          className='p-1 text-xs rounded-3xl bg-white w-fit font-bold '
         >
           CONTACT WITH WE
         </Link>
-        <h1 className='text-md font-bold text-white'>STARSCROW</h1>
+        <h1 className='hidden lg:inline-block text-md font-bold text-white'>
+          STARSCROW
+        </h1>
         <div
           className='flex items-center gap-1  cursor-pointer'
           onClick={() => setMenuIsOpen(!menuIsOpen)}
@@ -68,8 +70,8 @@ const NavLink = ({ menuIsOpen, setMenuIsOpen }: propType) => {
       </div>
 
       <div className='container-3xl'>
-        <div className='grid grid-cols-2'>
-          <div className='flex justify-center items-center'>
+        <div className='grid md:grid-cols-2'>
+          <div className='flex md:justify-center md:items-center p-3 py-6'>
             <AnimatePresence mode='wait'>
               <MenuItem
                 listMenu={listMenu}
@@ -78,7 +80,7 @@ const NavLink = ({ menuIsOpen, setMenuIsOpen }: propType) => {
               />
             </AnimatePresence>
           </div>
-          <div>
+          <div className='hidden md:block'>
             {selectedLink.isActive ? (
               <motion.div
                 variants={opacity}

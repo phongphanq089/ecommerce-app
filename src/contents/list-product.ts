@@ -382,3 +382,30 @@ export const listProductsCategory = [
     isVideo: false,
   },
 ]
+
+export const ListProductDetails = [
+  {
+    image:
+      'https://vision-naire.com/cdn/shop/files/COLLECTIONVINTAGE_HOODIE_LOGOVROND_2-3_1500x.jpg?v=1716911469',
+  },
+  {
+    image:
+      'https://vision-naire.com/cdn/shop/files/COLLECTIONVINTAGE_HOODIE_LOGOVROND_NOIR_1-3_1500x.jpg?v=1716911469',
+  },
+  {
+    image:
+      'https://vision-naire.com/cdn/shop/files/COLLECTIONVINTAGE_HOODIE_NOIR_3-3_1500x.jpg?v=1716911485',
+  },
+  {
+    image:
+      'https://vision-naire.com/cdn/shop/files/VISIONNAIRE_12_237a4ab9-9ea1-4ba6-b134-abe7f3f830b3_1500x.jpg?v=1718200915',
+  },
+  {
+    image:
+      'https://vision-naire.com/cdn/shop/files/VISIONNAIRE_MULTI_eb2e34fd-8771-4f41-b84d-6c2ff494bd9c_1500x.jpg?v=1718186926',
+  },
+  {
+    image:
+      'https://vision-naire.com/cdn/shop/files/VISIONNAIRE_MULTI_eb2e34fd-8771-4f41-b84d-6c2ff494bd9c_1500x.jpg?v=1718186926',
+  },
+]

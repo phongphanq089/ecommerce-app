@@ -33,7 +33,7 @@ const MenuItem = ({ listMenu, selectedLink, setSelectedLink }: PropType) => {
           >
             <Link
               href={href}
-              className='text-2xl font-bold text-white relative  inline-block'
+              className='text-xl md:text-2xl 2xl:text-3xl  font-bold text-white relative  inline-block uppercase'
             >
               {' '}
               {title}

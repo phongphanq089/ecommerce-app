@@ -3,6 +3,7 @@ import React from 'react'
 import { Card } from '../ui/card'
 import Image from 'next/image'
 import { NextImageResize, NextImageResizeCouple } from '../ui/ImageResize'
+import Link from 'next/link'
 
 interface ProductItem {
   title: string
@@ -18,7 +19,10 @@ interface ProductItem {
 const CardProduct = ({ products }: { products: ProductItem }) => {
   return (
     <Card className='overflow-hidden'>
-      <a href='#' className='group block overflow-hidden'>
+      <Link
+        href={`/product/${products.title}`}
+        className='group block overflow-hidden'
+      >
         <div className=''>
           <NextImageResizeCouple
             image1={products.image1}
@@ -50,7 +54,7 @@ const CardProduct = ({ products }: { products: ProductItem }) => {
             </div>
           </div>
         </div>
-      </a>
+      </Link>
     </Card>
   )
 }
