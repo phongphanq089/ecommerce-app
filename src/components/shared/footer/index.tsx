@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className='pt-4 md:pt-8 relative z-10 bg-white'>
       <div className='container-3xl'>
         <div className='container-xl flex flex-col justify-center items-center'>
-          <h3 className='text-sm md:text-md font-semibold text-center mb-2'>
+          <h3 className='text-sm md:text-md font-semibold text-center mb-2 max-w-[1000px]'>
             INVESTING IN YOURSELF IS THE FIRST STEP — LET’S TAKE THE NEXT FEW
             TOGETHER.
           </h3>

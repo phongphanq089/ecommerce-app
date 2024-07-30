@@ -7,7 +7,7 @@ const ProductThumb = () => {
   return (
     <div className='grid grid-cols-12 '>
       <div className='col-span-2 '>
-        <div className='flex flex-col gap-2 sticky top-[100px] h-fit mt-8'>
+        <div className='flex flex-col gap-2 sticky top-[100px] h-fit'>
           {ListProductDetails.map((product, index) => {
             return (
               <div key={index}>

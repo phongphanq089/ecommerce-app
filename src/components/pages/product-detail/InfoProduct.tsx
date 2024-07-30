@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import React from 'react'
+import PrivacyPolicy from './PrivacyPolicy'
 
 const InfoProduct = () => {
   return (
@@ -18,21 +19,98 @@ const InfoProduct = () => {
       <div className='flex flex-col'>
         <p className='text-sm font-semibold'>SIZES:</p>
         <div className='flex items-center gap-1 mb-1'>
-          <span className='bg-color-2 p-1 flex items-center justify-center w-6 '>
-            XXS
-          </span>
-          <span className='bg-color-2 p-1 flex items-center justify-center  w-6 '>
-            XS
-          </span>
-          <span className='bg-color-2 p-1 flex items-center justify-center w-6'>
-            S
-          </span>
-          <span className='bg-color-2 p-1 flex items-center justify-center  w-6 '>
-            M
-          </span>
-          <span className='bg-color-2 p-1 flex items-center justify-center  w-6 '>
-            L
-          </span>
+          <ul className='flex items-center gap-2'>
+            <li>
+              <input
+                type='radio'
+                id='xxs'
+                name='hosting'
+                value='xxs'
+                className='hidden peer'
+                required
+              />
+              <label
+                htmlFor='xxs'
+                className='inline-flex items-center justify-between w-full  text-color-1 bg-color-2 border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300  peer-checked:bg-black peer-checked:border-white peer-checked:text-white '
+              >
+                <div className='p-1 w-[50px] flex items-center justify-center'>
+                  XXS
+                </div>
+              </label>
+            </li>
+            <li>
+              <input
+                type='radio'
+                id='xs'
+                name='hosting'
+                value='xs'
+                className='hidden peer'
+                required
+              />
+              <label
+                htmlFor='xs'
+                className='inline-flex items-center justify-between w-full  text-color-1 bg-color-2 border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300  peer-checked:bg-black peer-checked:border-white peer-checked:text-white '
+              >
+                <div className='p-1 w-[50px] flex items-center justify-center'>
+                  XS
+                </div>
+              </label>
+            </li>
+            <li>
+              <input
+                type='radio'
+                id='s'
+                name='hosting'
+                value='s'
+                className='hidden peer'
+                required
+              />
+              <label
+                htmlFor='s'
+                className='inline-flex items-center justify-between w-full  text-color-1 bg-color-2 border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300  peer-checked:bg-black peer-checked:border-white peer-checked:text-white '
+              >
+                <div className='p-1 w-[50px] flex items-center justify-center'>
+                  S
+                </div>
+              </label>
+            </li>
+            <li>
+              <input
+                type='radio'
+                id='m'
+                name='hosting'
+                value='m'
+                className='hidden peer'
+                required
+              />
+              <label
+                htmlFor='m'
+                className='inline-flex items-center justify-between w-full  text-color-1 bg-color-2 border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300  peer-checked:bg-black peer-checked:border-white peer-checked:text-white '
+              >
+                <div className='p-1 w-[50px] flex items-center justify-center'>
+                  M
+                </div>
+              </label>
+            </li>
+            <li>
+              <input
+                type='radio'
+                id='l'
+                name='hosting'
+                value='l'
+                className='hidden peer'
+                required
+              />
+              <label
+                htmlFor='l'
+                className='inline-flex items-center justify-between w-full  text-color-1 bg-color-2 border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300  peer-checked:bg-black peer-checked:border-white peer-checked:text-white '
+              >
+                <div className='p-1 w-[50px] flex items-center justify-center'>
+                  L
+                </div>
+              </label>
+            </li>
+          </ul>
         </div>
         <span className='border-b border-black inline-block w-fit font-semibold text-[18px]'>
           Size help
@@ -41,9 +119,7 @@ const InfoProduct = () => {
         <Button className='px-1 my-3'>ADD TO CART</Button>
       </div>
 
-      <div className='px-1'>
-        <h2 className='text-md font-semibold'>Privacy Policy</h2>
-      </div>
+      <PrivacyPolicy />
     </div>
   )
 }

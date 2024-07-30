@@ -3,7 +3,7 @@ import React from 'react'
 
 const PageProductDetail = () => {
   return (
-    <div className='container-3xl py-8 relative '>
+    <div className='container-3xl py-3 md:py-8 relative '>
       <LayoutProductDetail />
     </div>
   )
