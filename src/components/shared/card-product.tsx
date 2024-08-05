@@ -4,30 +4,26 @@ import { Card } from '../ui/card'
 import Image from 'next/image'
 import { NextImageResize, NextImageResizeCouple } from '../ui/ImageResize'
 import Link from 'next/link'
+import { ProductListType } from '@/types/product'
 
-interface ProductItem {
-  title: string
-  price: string
-  image1: string
-  image2: string
-  size?:
-    | {
-        name: string
-      }[]
-}
-
-const CardProduct = ({ products }: { products: ProductItem }) => {
+const CardProduct = ({ products }: { products: ProductListType }) => {
   return (
     <Card className='overflow-hidden'>
       <Link
-        href={`/product/${products.title}`}
+        href={`/product/${products?.name}`}
         className='group block overflow-hidden'
       >
         <div className=''>
           <NextImageResizeCouple
-            image1={products.image1}
-            image2={products.image2}
-            alt={products.title}
+            image1={
+              products?.media.items[0]?.image?.url ||
+              '/images/product-demo/product-2-v1.webp'
+            }
+            image2={
+              products?.media.items[1]?.image?.url ||
+              '/images/product-demo/product-2-v1.webp'
+            }
+            alt={products.name}
             classImage1='group-hover:opacity-0'
             classImage2='opacity-0 group-hover:opacity-100'
           />
@@ -39,8 +35,8 @@ const CardProduct = ({ products }: { products: ProductItem }) => {
           </h3>
 
           <div className='mt-1.5 flex items-center flex-col text-gray-900'>
-            <p className='tracking-wide'>$189.99</p>
-            <div className='flex items-center gap-1'>
+            <p className='tracking-wide'>{`${products.price?.price}$`}</p>
+            {/* <div className='flex items-center gap-1'>
               {products.size?.map((size, index) => {
                 return (
                   <span
@@ -51,7 +47,7 @@ const CardProduct = ({ products }: { products: ProductItem }) => {
                   </span>
                 )
               })}
-            </div>
+            </div> */}
           </div>
         </div>
       </Link>

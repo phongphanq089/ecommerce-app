@@ -25,30 +25,15 @@ const CardCategoried = (props: PropsCart) => {
           <img src={src} className='w-full object-cover h-full' alt='' />
         )}
       </div>
-      <h3 className='text-xs md:text-md text-white font-semibold absolute left-3 bottom-3 md:right-5 md:top-5  z-20 w-fit md:writing-mode-vertical-lr'>
-        {title}
-      </h3>
-      <div className='absolute bottom-5 left-4 md:right-5 z-20'>
-        <ButtonStyle
-          link='/products'
-          text='Read more'
-          className='style-light'
-        />
-      </div>
-      <motion.div
-        initial={{ filter: 'blur(0px)', opacity: 0 }}
-        whileHover={{ filter: 'blur(2px)', opacity: 1 }}
-        transition={{ duration: 0.35 }}
-        className='w-[90%] h-[90%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 filter-blur '
+      <Link
+        href={link}
+        title={title}
+        className=' z-20  absolute left-3 bottom-3 p-1 bg-black'
       >
-        <Link
-          href={link}
-          title={title}
-          className='w-full h-full text-center relative z-20  flex items-center justify-center'
-        >
-          <span className='text-lg font-bold text-white'> View</span>
-        </Link>
-      </motion.div>
+        <h3 className='text-xs md:text-md text-white font-semibold w-fit'>
+          {title}
+        </h3>
+      </Link>
     </div>
   )
 }

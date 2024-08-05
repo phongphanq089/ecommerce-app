@@ -8,6 +8,12 @@ const nextConfig = {
         port: '',
         pathname: '/themes/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'static.wixstatic.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };

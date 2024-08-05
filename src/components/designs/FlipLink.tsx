@@ -11,7 +11,7 @@ const FlipLink = ({
 }: {
   children: string
   href: string
-  className: string
+  className?: string
 }) => {
   return (
     <motion.a

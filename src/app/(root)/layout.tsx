@@ -1,7 +1,6 @@
 import LayoutWrapper from '@/components/layout/LayoutWrapper'
 import Footer from '@/components/shared/footer'
-import Header from '@/components/shared/header'
-
+import Header from '@/components/shared/header_v2'
 export default function RootLayout({
   children,
 }: Readonly<{

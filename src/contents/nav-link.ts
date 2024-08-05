@@ -25,3 +25,90 @@ export const listMenu = [
     src: 'https://vision-naire.com/cdn/shop/files/LES-COULEURS-VISIONNAIRE-SWEAT-HOODIE-VERT-BLEU-rose_e97987b5-a749-4d95-8e35-137ba32f890b_750x750.jpg?v=1673372292',
   },
 ]
+
+export const navFooter = [
+  {
+    title: 'Clothing',
+    subMenu: [
+      {
+        name: 'Coats and Jackets',
+        href: '/',
+      },
+      {
+        name: 'Formal Jackets',
+        href: '/',
+      },
+      {
+        name: 'Leather',
+        href: '/',
+      },
+      {
+        name: 'Sweatshirts',
+        href: '/',
+      },
+    ],
+  },
+  {
+    title: 'Clothing',
+    subMenu: [
+      {
+        name: 'Coats and Jackets',
+        href: '/',
+      },
+      {
+        name: 'Formal Jackets',
+        href: '/',
+      },
+      {
+        name: 'Leather',
+        href: '/',
+      },
+      {
+        name: 'Sweatshirts',
+        href: '/',
+      },
+    ],
+  },
+  {
+    title: 'Shoes',
+    subMenu: [
+      {
+        name: 'Sneakers',
+        href: '/',
+      },
+      {
+        name: 'Out of office',
+        href: '/',
+      },
+      {
+        name: 'Leather',
+        href: '/',
+      },
+      {
+        name: 'Sweatshirts',
+        href: '/',
+      },
+    ],
+  },
+  {
+    title: 'Jewelry',
+    subMenu: [
+      {
+        name: 'Sneakers',
+        href: '/',
+      },
+      {
+        name: 'Out of office',
+        href: '/',
+      },
+      {
+        name: 'Leather',
+        href: '/',
+      },
+      {
+        name: 'Sweatshirts',
+        href: '/',
+      },
+    ],
+  },
+]

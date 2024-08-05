@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Alegreya } from 'next/font/google'
 import './globals.scss'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 const alegreya = Alegreya({
   weight: ['400', '500', '600', '700', '800', '900'],

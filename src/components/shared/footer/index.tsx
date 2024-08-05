@@ -3,24 +3,34 @@ import TextFullContainerHero from '@/components/designs/TextFullContainer'
 import Link from 'next/link'
 import React from 'react'
 import SocialLink from './SocialLink'
+import { navFooter } from '@/contents/nav-link'
 
 const Footer = () => {
   return (
     <footer className='pt-4 md:pt-8 relative z-10 bg-white'>
       <div className='container-3xl'>
-        <div className='container-xl flex flex-col justify-center items-center'>
-          <h3 className='text-sm md:text-md font-semibold text-center mb-2 max-w-[1000px]'>
-            INVESTING IN YOURSELF IS THE FIRST STEP — LET’S TAKE THE NEXT FEW
-            TOGETHER.
-          </h3>
-          <Link
-            href='/contact'
-            className='p-1 md:p-3 text-xs rounded-3xl bg-color-1 text-white w-fit '
-          >
-            CONTACT WITH WE
-          </Link>
-        </div>
         <TextFullContainerHero text2='STARSCROW' />
+
+        <div className='grid grid-cols-4 gap-4'>
+          {navFooter?.map((items, index) => {
+            return (
+              <div key={index}>
+                <h3 className='text-sm font-semibold'>{items.title}</h3>
+                <ul className='flex flex-col gap-1'>
+                  {items.subMenu.map((sub, index) => {
+                    return (
+                      <li key={`${sub.name}-${index}`}>
+                        <Link href={sub.href} className='text-[18px]'>
+                          {sub.name}
+                        </Link>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            )
+          })}
+        </div>
         <div className='w-fit mx-auto py-4'>
           <SocialLink />
         </div>
