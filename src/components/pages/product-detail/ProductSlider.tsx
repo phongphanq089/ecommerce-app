@@ -4,7 +4,6 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel'
-import { Product } from '@/types/product'
 import { products } from '@wix/stores'
 import React from 'react'
 

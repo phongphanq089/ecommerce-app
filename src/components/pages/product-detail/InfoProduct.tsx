@@ -7,10 +7,10 @@ import { products } from '@wix/stores'
 
 const InfoProduct = ({ productInfo }: { productInfo: products.Product }) => {
   return (
-    <div className='p-1 h-fit sticky  top-[100px]'>
+    <div className='p-1 h-fit sticky top-[120px]'>
       <h2 className='text-md font-medium'>{productInfo.name}</h2>
       <span className='text-xl font-bold leading-none mb-2 inline-block'>
-        {`${productInfo.price}$`}
+        {`${productInfo.priceData?.price}$`}
       </span>
 
       <Description text={productInfo.description} />
