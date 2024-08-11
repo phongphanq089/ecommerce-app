@@ -7,11 +7,11 @@ import { navFooter } from '@/contents/nav-link'
 
 const Footer = () => {
   return (
-    <footer className='pt-4 md:pt-8 relative z-10 bg-white'>
+    <footer className='pt-4 md:pt-8 relative z-10'>
       <div className='container-3xl'>
         <TextFullContainerHero text2='STARSCROW' />
 
-        <div className='grid grid-cols-4 gap-4'>
+        <div className='grid grid-cols-4 gap-4 mb-6'>
           {navFooter?.map((items, index) => {
             return (
               <div key={index}>

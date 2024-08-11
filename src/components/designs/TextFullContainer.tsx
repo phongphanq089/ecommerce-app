@@ -67,7 +67,7 @@ const TextFullContainerHero = ({
       ref={containerRef}
     >
       <span
-        className=' mx-auto whitespace-nowrap text-center font-semibold text-bg-dark leading-[1.4]'
+        className=' mx-auto whitespace-nowrap text-center font-semibold text-bg-dark leading-[1.4] font-heading1'
         ref={textRef}
       >
         {text2}

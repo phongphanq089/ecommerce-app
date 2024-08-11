@@ -6,9 +6,10 @@ interface PropsType {
   link: string
   text: string
   className?: string
+  icons?: JSX.Element
 }
 
-const ButtonStyle = ({ link, text, className }: PropsType) => {
+export const ButtonStyle = ({ link, text, className }: PropsType) => {
   return (
     <Link href={link} className={cn('cta', className)}>
       <span className='hover-underline-animation'>{text}</span>
@@ -35,4 +36,26 @@ const ButtonStyle = ({ link, text, className }: PropsType) => {
   )
 }
 
-export default ButtonStyle
+export const ButtonStyle_v1 = ({ link, text, className, icons }: PropsType) => {
+  return (
+    <Link href={link} className={cn('button-style-1', className)}>
+      <span className='z-10 relative text-white'>{text}</span>
+      <div className='hoverEffect'>
+        <div></div>
+      </div>
+      {icons}
+    </Link>
+  )
+}
+
+export const ButtonStyle_v2 = ({ link, text, className, icons }: PropsType) => {
+  return (
+    <Link
+      href={link}
+      className={cn('button-style-2 text-sm font-bold', className)}
+    >
+      <span className=' text-white'>{text}</span>
+      {icons}
+    </Link>
+  )
+}

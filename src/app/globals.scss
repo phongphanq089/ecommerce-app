@@ -112,6 +112,10 @@
     transition: all 0.3s;
   }
 
+  .color-rgba {
+    color: rgba(0, 0, 0, 0.85);
+  }
+
   .btn-sroll-top {
     background-color: var(--color-1);
     border-radius: 50%;

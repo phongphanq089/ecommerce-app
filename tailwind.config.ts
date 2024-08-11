@@ -80,6 +80,10 @@ const config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      fontFamily: {
+        heading1: ['var(--font-heading1)'],
+        heading2: ['var(--font-heading2)'],
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },

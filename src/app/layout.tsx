@@ -1,13 +1,22 @@
 import type { Metadata } from 'next'
-import { Alegreya } from 'next/font/google'
+import { Alegreya, Nunito } from 'next/font/google'
 import './globals.scss'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import { cn } from '@/lib/utils'
+import { WixClientContextProvider } from '@/context/wixContext'
 
 const alegreya = Alegreya({
   weight: ['400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
+  variable: '--font-heading1',
+})
+
+const nunito = Nunito({
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+  variable: '--font-heading2',
 })
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -21,8 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={alegreya.className} suppressHydrationWarning>
-        {children}
+      <body
+        className={cn('bg-color-3', alegreya.variable, nunito.className)}
+        suppressHydrationWarning
+      >
+        <WixClientContextProvider>{children}</WixClientContextProvider>
       </body>
     </html>
   )

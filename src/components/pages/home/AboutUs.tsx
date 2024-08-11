@@ -1,13 +1,15 @@
 import { NextImageResize } from '@/components/ui/ImageResize'
+import SparklesText from '@/components/ui/sparkles-text'
 import React from 'react'
 
 const AboutUs = () => {
   return (
     <div className='py-8'>
       <div className='container-3xl'>
-        <h3 className='text-sm font-semibold'>ABOUT US</h3>
         <div className='grid grid-cols-12'>
-          <div className='col-span-3'></div>
+          <div className='col-span-3'>
+            <SparklesText text='ABOUT US' className='text-md' />
+          </div>
           <div className='col-span-9'>
             <p className='text-sm text-end'>
               Each collection reflects the lasted fashion trends an uniqued

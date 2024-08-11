@@ -10,6 +10,20 @@ export interface Media {
   items: MediaItem[]
 }
 
+interface ProductOption {
+  productOptions: {
+    optionType: string
+    name: string
+    choices: []
+  }[]
+}
+
+interface ProductVariant {
+  choices: Object
+  variants: []
+  stock: Object
+}
+
 interface price {
   price: {
     price: string
@@ -22,8 +36,10 @@ export interface ProductListType {
 }
 
 export interface Product {
+  _id: string
   name: string
   slug: string
+  description: string
   price: {
     price: number
     discountedPrice: number
@@ -32,5 +48,7 @@ export interface Product {
   media: {
     items: MediaItem[]
   }
-  variants: []
+
+  productOptions: ProductOption[]
+  variants?: ProductVariant[]
 }

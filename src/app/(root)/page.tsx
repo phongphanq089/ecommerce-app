@@ -1,5 +1,5 @@
 import AboutUs from '@/components/pages/home/AboutUs'
-import BannerHero from '@/components/pages/home/banner-hero_v2'
+import BannerHero from '@/components/pages/home/banner-hero'
 import GetContact from '@/components/pages/home/GetContact'
 import SectionCategoried from '@/components/pages/home/SectionCategoried'
 import TextBanner from '@/components/pages/home/TextBanner'
@@ -14,17 +14,23 @@ const Home = () => {
     <>
       <BannerHero />
       <TextBanner />
-      <ProductCarousel
-        title='Discover new Menswear'
-        categoryId={'92e74587-b706-9628-3acd-909ea3a2d9c7'}
-        limit={10}
-      />
+      <div className='container-3xl'>
+        <ProductCarousel
+          title='Discover new Menswear'
+          categoryId={'92e74587-b706-9628-3acd-909ea3a2d9c7'}
+          limit={10}
+        />
+      </div>
       <SectionCategoried product={listProductsCategory1} />
-      <ProductCarousel
-        title='Discover new womenswear'
-        categoryId={'9490d2dc-7f31-26d4-6c98-340f44cb4e06'}
-        limit={10}
-      />
+      <div className='container-3xl'>
+        {' '}
+        <ProductCarousel
+          title='Discover new womenswear'
+          categoryId={'9490d2dc-7f31-26d4-6c98-340f44cb4e06'}
+          limit={10}
+        />
+      </div>
+
       <SectionCategoried product={listProductsCategory2} />
       <AboutUs />
       <GetContact />

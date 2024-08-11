@@ -1,5 +1,4 @@
 import LayoutWrapper from '@/components/layout/LayoutWrapper'
-import Header from '@/components/pages/auth/Header'
 import Image from 'next/image'
 
 export default function RootLayout({
@@ -10,7 +9,6 @@ export default function RootLayout({
   return (
     <LayoutWrapper>
       <div className='layout-wrapper'>
-        <Header />
         <main className='w-full min-h-screen relative '>
           <div className='container-3xl'>
             <div className='grid xl:grid-cols-12 gap-3'>

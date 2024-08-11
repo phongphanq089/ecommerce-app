@@ -276,13 +276,13 @@ export const listProductsCategory1 = [
   {
     src: 'https://vision-naire.com/cdn/shop/files/visionnaire_theodort_hoodie_nouvelle__collection_bigflo_oli-copie_750x750.jpg?v=1686819340',
     title: 'SWEAT-SHIRT',
-    link: '/new-arrivals',
+    link: '/products-list?categorie=all-products',
     isVideo: false,
   },
   {
     src: 'https://vision-naire.com/cdn/shop/videos/c/vp/c59cfcd5a43c43b6a78721703934eaf2/c59cfcd5a43c43b6a78721703934eaf2.HD-1080p-3.3Mbps-30442736.mp4?v=0',
     title: `MEN'S SHIRTS`,
-    link: '/new-arrivals',
+    link: '/products-list?categorie=all-products',
     isVideo: true,
   },
 ]
@@ -291,13 +291,13 @@ export const listProductsCategory2 = [
   {
     src: 'https://vision-naire.com/cdn/shop/videos/c/vp/66cddae383254d0297d69c68a2ccc919/66cddae383254d0297d69c68a2ccc919.HD-1080p-7.2Mbps-21375908.mp4?v=0',
     title: `WOMEN'S T-SHIRT`,
-    link: '/new-arrivals',
+    link: '/products-list?categorie=all-products',
     isVideo: true,
   },
   {
     src: 'https://vision-naire.com/cdn/shop/files/CASQUETTE-univ_rose_visionnaire_2_e63fdb20-27ff-4178-a049-948f40b9c916_750x750.jpg?v=1686832796',
     title: `WOMEN'S JACKET`,
-    link: '/new-arrivals',
+    link: '/products-list?categorie=all-products',
     isVideo: false,
   },
 ]
