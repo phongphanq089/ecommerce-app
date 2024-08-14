@@ -54,8 +54,23 @@ export const ButtonStyle_v2 = ({ link, text, className, icons }: PropsType) => {
       href={link}
       className={cn('button-style-2 text-sm font-bold', className)}
     >
-      <span className=' text-white'>{text}</span>
-      {icons}
+      <span>
+        {text} {icons}
+      </span>
+    </Link>
+  )
+}
+
+export const ButtonStyle_v3 = ({ link, text, className, icons }: PropsType) => {
+  return (
+    <Link href={link} className={cn('button-style-3', className)}>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div className='text'>
+        {text} {icons}
+      </div>
     </Link>
   )
 }

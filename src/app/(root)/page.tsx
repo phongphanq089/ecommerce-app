@@ -1,6 +1,7 @@
 import AboutUs from '@/components/pages/home/AboutUs'
 import BannerHero from '@/components/pages/home/banner-hero'
 import GetContact from '@/components/pages/home/GetContact'
+import NewProducts from '@/components/pages/home/NewProducts'
 import SectionCategoried from '@/components/pages/home/SectionCategoried'
 import TextBanner from '@/components/pages/home/TextBanner'
 import ProductCarousel from '@/components/shared/ProductCarousel'
@@ -14,6 +15,14 @@ const Home = () => {
     <>
       <BannerHero />
       <TextBanner />
+
+      <div className='container-3xl'>
+        <NewProducts
+          title='NEW IN'
+          categoryId={'73b2d3e5-2421-63fa-9999-9d6df85aae66'}
+          limit={10}
+        />
+      </div>
       <div className='container-3xl'>
         <ProductCarousel
           title='Discover new Menswear'

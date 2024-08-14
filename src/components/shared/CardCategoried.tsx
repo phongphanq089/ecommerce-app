@@ -1,7 +1,7 @@
 'use client'
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import { ButtonStyle_v1 } from '../designs/ButtonStyle'
+import { ButtonStyle_v1, ButtonStyle_v3 } from '../designs/ButtonStyle'
 interface PropsCart {
   src: string
   title: string
@@ -22,8 +22,8 @@ const CardCategoried = (props: PropsCart) => {
           <img src={src} className='w-full object-cover h-full' alt='' />
         )}
       </div>
-      <div className=' z-20  absolute left-3 bottom-3 p-1 '>
-        <ButtonStyle_v1
+      <div className=' z-20 absolute left-3 bottom-3 bg-black '>
+        <ButtonStyle_v3
           link={link}
           text={title}
           className='bg-white flex'

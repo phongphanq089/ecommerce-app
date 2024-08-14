@@ -6,6 +6,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { cn } from '@/lib/utils'
 import { WixClientContextProvider } from '@/context/wixContext'
+import { Toaster } from '@/components/ui/sonner'
 
 const alegreya = Alegreya({
   weight: ['400', '500', '600', '700', '800', '900'],
@@ -35,6 +36,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <WixClientContextProvider>{children}</WixClientContextProvider>
+        <Toaster />
       </body>
     </html>
   )

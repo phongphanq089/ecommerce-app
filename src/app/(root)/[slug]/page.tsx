@@ -1,6 +1,7 @@
-import InfoProduct from '@/components/pages/product-detail/InfoProduct'
-import ProductSlider from '@/components/pages/product-detail/ProductSlider'
+import CustomOptionsProduct from '@/components/pages/product-detail/CustomOptionsProduct'
+import ProductInfo from '@/components/pages/product-detail/ProductInfo'
 import ProductThumb from '@/components/pages/product-detail/ProductThumb'
+
 import { wixClientServer } from '@/lib/wixClientServer'
 import { products } from '@wix/stores'
 
@@ -19,18 +20,17 @@ const PageProductDetail = async ({ params }: { params: { slug: string } }) => {
     return notFound()
   }
 
-  const product = products.items[0]
+  const product = products.items[0] as products.Product
+
+  console.log(product, 'list products')
 
   return (
     <div className='container-3xl py-3 md:py-8 relative '>
       <div className='grid md:grid-cols-2 xl:grid-cols-12'>
-        <div className='xl:col-span-4'>
-          {/* <div className='block md:hidden'>
-            <ProductSlider productInfo={product as products.Product} />
-          </div> */}
-          {/* <div className='hidden md:block'>
-            <ProductThumb productInfo={product as products.Product} />
-          </div> */}
+        <div className='xl:col-span-7'>
+          <ProductThumb productInfo={product as products.Product} />
+        </div>
+        <div className='xl:col-span-5'>
           <div className='sticky top-1/2 -translate-y-1/2 h-fit'>
             <div className='flex flex-col h-fit relative'>
               <svg
@@ -54,7 +54,27 @@ const PageProductDetail = async ({ params }: { params: { slug: string } }) => {
                   fill='currentColor'
                 ></path>
               </svg>
-              <div className='h-[400px] w-full bg-white relative'></div>
+              <div className='min-h-[400px] w-full bg-white relative'>
+                <div className='flex flex-col items-start p-2 pb-0 uppercase'>
+                  <h2 className='text-xs font-bold'>{product?.name}</h2>
+                  <span className=' inline-block  rounded-xl text-sm font-bold'>
+                    {product?.priceData?.price}$
+                  </span>
+                </div>
+                <div className='p-3'>
+                  <CustomOptionsProduct
+                    productId={product._id!}
+                    variants={product.variants}
+                    productOptions={product.productOptions}
+                  />
+                </div>
+
+                {product?.additionalInfoSections && (
+                  <div className='p-2'>
+                    <ProductInfo productInfo={product as products.Product} />
+                  </div>
+                )}
+              </div>
               <svg
                 name='Shape bottom variants'
                 viewBox='0 0 343 12'
@@ -68,39 +88,6 @@ const PageProductDetail = async ({ params }: { params: { slug: string } }) => {
               </svg>
             </div>
           </div>
-        </div>
-        <div className='xl:col-span-4'>
-          <ProductThumb productInfo={product as products.Product} />
-        </div>
-        <div className='xl:col-span-4'>
-          <div className='sticky top-1/2 -translate-y-1/2 h-fit'>
-            <div className='flex flex-col'>
-              <svg
-                preserveAspectRatio='none'
-                name='Shape top variants'
-                viewBox='0 0 343 12'
-                className='!text-white relative top-[1px]'
-              >
-                <path
-                  d='M0 4a4 4 0 0 1 4-4h230.52a6 6 0 0 1 4.24 1.76l4.48 4.48A6 6 0 0 0 247.48 8H339a4 4 0 0 1 4 4H0Z'
-                  fill='currentColor'
-                ></path>
-              </svg>
-              <div className='h-[400px] w-full bg-white relative'></div>
-              <svg
-                name='Shape bottom variants'
-                viewBox='0 0 343 12'
-                preserveAspectRatio='none'
-                className='!text-white relative bottom-[1px]'
-              >
-                <path
-                  d='M343 8a4 4 0 0 1-4 4H108.49a6 6 0 0 1-4.25-1.76l-4.48-4.48A6 6 0 0 0 95.51 4H4a4 4 0 0 1-4-4h343Z'
-                  fill='currentColor'
-                ></path>
-              </svg>
-            </div>
-          </div>
-          {/* <InfoProduct productInfo={product as products.Product} /> */}
         </div>
       </div>
     </div>

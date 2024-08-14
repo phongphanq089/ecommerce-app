@@ -62,7 +62,7 @@ const CustomOptionsProduct = ({
       {productOptions?.map((item, index) => {
         return (
           <div key={index}>
-            <h4 className='font-medium'>Choose a {item.name}</h4>
+            <h4 className='font-medium'>Choose a {item.name} : </h4>
             <div className='flex items-center gap-1 mb-1'>
               <ul className='flex items-center gap-2 relative'>
                 {item.choices?.map((option, index) => {

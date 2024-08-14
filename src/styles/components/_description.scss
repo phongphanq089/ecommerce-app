@@ -1,0 +1,57 @@
+.showTextDetail > * {
+  font-size: 16px;
+  color: black;
+  text-align: justify;
+  overflow-x: auto;
+  font-weight: 500;
+}
+.showTextDetail h1,
+.showTextDetail h2,
+.showTextDetail h3,
+.showTextDetail h4,
+.showTextDetail h5,
+.showTextDetail h6 {
+  font-size: 24px;
+  font-weight: bold;
+
+  @include downMd {
+    font-size: 18px;
+  }
+  @include downSm {
+    font-size: 16px;
+  }
+}
+.showTextDetail table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.showTextDetail table td {
+  padding: 10px 15px;
+  border: 1px solid #eeeeee;
+}
+
+.showTextDetail table th {
+  padding: 10px 15px;
+  border: 1px solid #eeeeee;
+}
+.showTextDetail > * {
+  margin: 0 0 15px 0;
+}
+.showTextDetail img {
+  max-width: 100%;
+  height: auto;
+}
+.showTextDetail a {
+  color: black;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.showTextDetail a:hover {
+  color: black;
+}
+.showTextDetail > *:last-child {
+  margin-bottom: 0;
+}

@@ -10,7 +10,7 @@ const ProductThumb = ({ productInfo }: { productInfo: products.Product }) => {
   return (
     <div className='mt-6 px-3'>
       <div className='px-2'>
-        <div className='flex flex-col gap-2'>
+        <div className='grid grid-cols-2 gap-2'>
           {productInfo?.media?.items?.map((product, index) => {
             return (
               <div key={index} className='relative rounded-2xl overflow-hidden'>

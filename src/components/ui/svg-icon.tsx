@@ -46,21 +46,23 @@ const Icons: Record<string, JSX.Element> = {
       <path d='m7.375 16.781 1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4a1 1 0 0 0 0 1.562l5 4zm9.25-9.562-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4a1 1 0 0 0 0-1.562l-5-4zm-1.649-4.003-4 18-1.953-.434 4-18z'></path>
     </svg>
   ),
-  imageCreate: (
+  'arrow-right': (
     <svg
       xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
       strokeWidth='2'
       strokeLinecap='round'
       strokeLinejoin='round'
+      className='icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right relative z-10 stroke-white'
     >
-      <path d='M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7' />
-      <line x1='16' x2='22' y1='5' y2='5' />
-      <line x1='19' x2='19' y1='2' y2='8' />
-      <circle cx='9' cy='9' r='2' />
-      <path d='m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21' />
+      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+      <path d='M5 12l14 0' />
+      <path d='M15 16l4 -4' />
+      <path d='M15 8l4 4' />
     </svg>
   ),
   people: (
@@ -76,22 +78,6 @@ const Icons: Record<string, JSX.Element> = {
       <path d='M18 21a8 8 0 0 0-16 0' />
       <circle cx='10' cy='8' r='5' />
       <path d='M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3' />
-    </svg>
-  ),
-  'arrow-right': (
-    <svg
-      id='arrow-horizontal'
-      xmlns='http://www.w3.org/2000/svg'
-      width='30'
-      height='10'
-      viewBox='0 0 46 16'
-    >
-      <path
-        id='Path_10'
-        data-name='Path 10'
-        d='M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z'
-        transform='translate(30)'
-      ></path>
     </svg>
   ),
 }

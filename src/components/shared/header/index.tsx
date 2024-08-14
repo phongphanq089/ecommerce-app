@@ -1,10 +1,11 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
-import TopHeader from './TopHeader'
 import Logo from '../logo'
 import Link from 'next/link'
-import { cn } from '@/lib/utils'
-import { ButtonStyle_v1 } from '@/components/designs/ButtonStyle'
+import {
+  ButtonStyle_v2,
+  ButtonStyle_v3,
+} from '@/components/designs/ButtonStyle'
 
 const menuList = [
   {
@@ -106,11 +107,13 @@ const Header = () => {
               </span>
             </div>
 
-            <ButtonStyle_v1
-              link={`/login`}
-              text=' LOGIN'
-              className='bg-white flex'
-            />
+            <div className='bg-black'>
+              <ButtonStyle_v3
+                link={`/login`}
+                text=' LOGIN'
+                className='bg-white flex'
+              />
+            </div>
           </div>
         </div>
       </div>
